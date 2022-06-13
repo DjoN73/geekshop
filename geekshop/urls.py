@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from mainapp import views
 
+pass
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -26,6 +27,7 @@ urlpatterns = [
 
     path('products/', include('mainapp.urls', namespace='products')),
     path('auth/', include('authapp.urls', namespace='authapp')),
+    path('basket/', include('basketapp.urls', namespace='basket')),
 
     path('contact/', views.contact, name='contact'),
 ]
