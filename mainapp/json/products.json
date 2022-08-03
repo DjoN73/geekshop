@@ -1,0 +1,74 @@
+[
+  {
+    "category": "дом",
+    "name": "Красный стул",
+    "image": "product/red_chair.jpg",
+    "short_desk": "Стул для дома",
+    "description": "Удобный красный стул",
+    "price": 1500.0,
+    "quantity": 15
+  },
+  {
+    "category": "дом",
+    "name": "Серый диван",
+    "image": "product/sofa_1.jpeg",
+    "short_desk": "Раскладной диван серого цвета",
+    "description": "Красивый, удобный раскладной диван",
+    "price": 36000.0,
+    "quantity": 7
+  },
+  {
+    "category": "офис",
+    "name": "Серое кресло",
+    "image": "",
+    "short_desk": "Офисное кресло",
+    "description": "Удобное офисное кресло серого цвета ",
+    "price": 2700.0,
+    "quantity": 10
+  },
+  {
+    "category": "офис",
+    "name": "Кресло начальника",
+    "image": "",
+    "short_desk": "Серое кресло начальника",
+    "description": "Удобный офисное кресло для начальника",
+    "price": 5000.0,
+    "quantity": 25
+  },
+  {
+    "category": "модерн",
+    "name": "Софа №1",
+    "image": "product/modern_1.jpeg",
+    "short_desk": "Удобная софа",
+    "description": "Изящная софа для вашего дома",
+    "price": 35000.0,
+    "quantity": 2
+  },
+  {
+    "category": "модерн",
+    "name": "Софа №2",
+    "image": "product/modern_2.jpeg",
+    "short_desk": "Красивая софа",
+    "description": "Очень удобная и красивая софа",
+    "price": 1500.0,
+    "quantity": 15
+  },
+  {
+    "category": "классика",
+    "name": "Набор кресла со столиком",
+    "image": "product/classic_1.jpeg",
+    "short_desk": "Журнальный столик в наборе с креслами",
+    "description": "Удобные кресла с журнальным столикомиз стекла",
+    "price": 13500.0,
+    "quantity": 9
+  },
+  {
+    "category": "классика",
+    "name": "Декоративный камин",
+    "image": "product/classic_2.png",
+    "short_desk": "Изящный камин",
+    "description": "Изящный камин, выполненый в класическом стиле",
+    "price": 9000.0,
+    "quantity": 3
+  }
+]
