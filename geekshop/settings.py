@@ -10,23 +10,34 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
+import environ
+
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ds3hpjpv%wy)6i-c^3-urvn#&m+mthx84hn!dra#5$!offp8#8'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
+SOCIAL_AUTH_VK_OAUTH2_KEY = env.str('SOCIAL_AUTH_VK_OAUTH2_KEY')
+SOCIAL_AUTH_VK_OAUTH2_SECRET = env.str('SOCIAL_AUTH_VK_OAUTH2_SECRET')
+SOCIAL_AUTH_MAILRU_KEY = env.str('SOCIAL_AUTH_MAILRU_KEY')
+SOCIAL_AUTH_MAILRU_SECRET = env.str('SOCIAL_AUTH_MAILRU_SECRET')
 
 # Application definition
 
@@ -44,7 +55,15 @@ INSTALLED_APPS = [
     'authapp',
     'basketapp',
     'mainapp',
+
+    'social_django',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2',
+    'social_core.backends.mailru.MRGOAuth2',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
